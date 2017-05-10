@@ -1719,7 +1719,6 @@ int Client::make_request(MetaRequest *request,
     r = request->get_abort_code();
     request->item.remove_myself();
     unregister_request(request);
-    put_request(request); // ours
     return r;
   }
 
